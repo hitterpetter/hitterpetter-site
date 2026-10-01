@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HitterPetter Productions</title>
+<meta name="description" content="HitterPetter Productions is an L.A.-based production house: award-winning short films (Scarlet, Blinks, Audition), the Bulgarian Kuker art car, festivals, concerts and screenings.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hitterpetter.com/">
+<meta property="og:title" content="HitterPetter Productions">
+<meta property="og:description" content="HitterPetter Productions is an L.A.-based production house: award-winning short films (Scarlet, Blinks, Audition), the Bulgarian Kuker art car, festivals, concerts and screenings.">
+<meta property="og:image" content="https://hitterpetter.com/img/k-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Archivo:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: ink-on-white production house sheet; a night-black Kuker section in the middle; martenitsa red/white cord as the only divider. Single deliberate look. */
+:root{
+  --paper:#FAFAF8; --ink:#141212; --muted:#5E5856; --line:#DCD8D5;
+  --red:#C21F2B; --night:#100E0E; --night-2:#1C1919; --snow:#F5F2EF; --snow-muted:#B3ACA8;
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:1120px; --gut:clamp(16px,4vw,40px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);margin:0}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;text-wrap:balance;margin:0}
+.eyebrow{font:500 12px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.cord{height:10px;background:repeating-linear-gradient(135deg,var(--red) 0 9px,var(--paper) 9px 18px);border-block:1px solid var(--ink)}
+.todo{display:inline-block;font:500 11px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;border:1px dashed var(--red);color:var(--red);padding:2px 7px;border-radius:3px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.top img{height:38px;width:auto;display:block}
+.top nav{display:flex;flex-wrap:wrap;gap:4px 20px;font:500 13px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.top nav a{text-decoration:none;padding:6px 0}
+.top nav a:hover{color:var(--red)}
+@media (max-width:640px){.top nav{display:none}.top img{height:32px}}
+
+/* hero */
+.hero{padding-block:clamp(48px,8vw,104px) clamp(40px,6vw,72px)}
+.hero .grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:end}
+.hero h1{font-size:clamp(44px,8.4vw,108px);letter-spacing:-.01em}
+.hero h1 span{color:var(--red)}
+.hero p.lede{font-size:clamp(18px,1.6vw,21px);max-width:34ch;margin:0 0 20px}
+.disciplines{list-style:none;padding:0;margin:0;border-top:2px solid var(--ink)}
+.disciplines li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-weight:500}
+.disciplines li b{font:500 12px/1.6 var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:28px;font:400 13px/1.4 var(--mono);color:var(--muted)}
+@media (max-width:820px){.hero .grid{grid-template-columns:1fr}}
+
+/* about */
+.about{padding-block:clamp(48px,7vw,80px)}
+.about .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(28px,5vw,72px);align-items:start}
+.name-card{border:2px solid var(--ink);padding:24px 24px 22px;background:var(--paper)}
+.name-card .eq{font:400 clamp(30px,3.6vw,44px)/1.05 var(--display);margin:6px 0 14px}
+.name-card .eq span{color:var(--red)}
+.name-card p{margin:0 0 10px;font-size:16px}
+.name-card small{font:400 12px/1.5 var(--mono);color:var(--muted)}
+.about-text p{margin:0 0 16px;max-width:60ch}
+.about-text p.big{font-size:clamp(20px,1.9vw,24px);line-height:1.45}
+@media (max-width:820px){.about .grid{grid-template-columns:1fr}}
+.quote{border-left:3px solid var(--red);padding:2px 0 2px 18px;margin:18px 0;font-size:18px;font-style:italic;max-width:52ch}
+.quote cite{display:block;font:400 12px/1.6 var(--mono);font-style:normal;color:var(--muted);margin-top:6px}
+.crew{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:18px 0 0}
+.crew li{border:1px solid #4A4443;border-radius:999px;padding:5px 12px;font-size:14px;color:var(--snow)}
+.crew li small{color:var(--snow-muted);font-size:12px}
+.posters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.posters img{max-width:100%}
+.ev .sub{margin:10px 0 0;font-size:15px;color:var(--muted)}
+/* sections */
+section{padding-block:clamp(56px,8vw,96px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px 56px;align-items:end;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head h2{font-size:clamp(36px,5.4vw,64px)}
+.sec-head p{margin:0;color:var(--muted);max-width:52ch}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+
+/* films */
+.films{display:grid;gap:0;border-top:2px solid var(--ink)}
+.film{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1.05fr);gap:24px 40px;padding-block:36px;border-bottom:1px solid var(--line)}
+.film .poster-img{display:block;width:100%;height:auto;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--red)}
+.film .tally{display:inline-flex;gap:14px;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+.film .tally b{color:var(--red);font-weight:500}
+.laurels li.sel{color:var(--muted)}
+.laurels li.sel::before{background:transparent;border:1px solid var(--muted)}
+.laurels li.h::before{display:none}
+.laurels li.h{padding-left:0;font:500 11px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:14px 0 2px}
+.press{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.press li{font-size:15px;font-style:italic;border-left:3px solid var(--red);padding-left:12px}
+.press li span{display:block;font:400 12px/1.5 var(--mono);font-style:normal;color:var(--muted)}
+.film .yr{font:500 14px/1 var(--mono);color:var(--red);margin:0 0 8px}
+.film h3{font-size:clamp(30px,3.6vw,44px);margin-bottom:10px}
+.film .log{margin:0 0 14px;max-width:46ch}
+.film .meta{font:400 13px/1.5 var(--mono);color:var(--muted)}
+.credits{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;margin:0;font-size:15px}
+.credits dt{font:500 11px/1.9 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.credits dd{margin:0}
+.laurels{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:6px;font-size:15px}
+.laurels li{padding-left:18px;position:relative}
+.laurels li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;background:var(--red);transform:rotate(45deg)}
+.laurels li.win{font-weight:700}
+.film .links{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:14px;font:500 13px/1.4 var(--mono)}
+@media (max-width:980px){.film{grid-template-columns:160px minmax(0,1fr)}.film>div:last-child{grid-column:1/-1}}
+@media (max-width:560px){.film{grid-template-columns:1fr}.film .poster-img{max-width:240px}}
+
+/* kuker */
+.kuker{background:var(--night);color:var(--snow)}
+.kuker .eyebrow{color:#FF5A5F}
+.kuker .sec-head p{color:var(--snow-muted)}
+.kuker h2 em{font-style:normal;color:#FF5A5F}
+.specs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #3A3534;border-bottom:1px solid #3A3534;margin-bottom:clamp(40px,6vw,64px)}
+.specs div{padding:20px 18px 22px;border-left:1px solid #3A3534}
+.specs div:first-child{border-left:0;padding-left:0}
+.specs b{display:block;font:400 clamp(26px,3vw,36px)/1.05 var(--display);color:var(--snow)}
+.specs span{font:400 12px/1.4 var(--mono);color:var(--snow-muted);letter-spacing:.04em}
+@media (max-width:820px){.specs{grid-template-columns:repeat(2,minmax(0,1fr))}.specs div:nth-child(3){border-left:0;padding-left:0}.specs div:nth-child(n+3){border-top:1px solid #3A3534}}
+.k-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(32px,5vw,72px)}
+.k-grid p{color:var(--snow-muted);margin:0 0 16px;max-width:48ch}
+.k-grid p strong{color:var(--snow);font-weight:500}
+.k-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.k-links a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid #4A4443;padding:10px 14px;border-radius:999px}
+.k-links a:hover{border-color:#FF5A5F;color:#FF5A5F}
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid #FF5A5F}
+.timeline li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:0 0 18px 20px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;background:var(--night);border:2px solid #FF5A5F;border-radius:50%}
+.timeline li.build::before{background:#FF5A5F}
+.timeline time{font:500 13px/1.6 var(--mono);color:var(--snow-muted)}
+.timeline span{font-weight:500}
+.timeline small{display:block;color:var(--snow-muted);font-size:14px;font-weight:400}
+@media (max-width:820px){.k-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.timeline li{grid-template-columns:1fr;gap:2px}}
+
+.k-tag{font:400 clamp(24px,2.6vw,32px)/1.1 var(--display);color:#FF5A5F;margin:0 0 10px}
+.kuker .sec-head p.k-tag{color:#FF5A5F;margin:0 0 10px}
+.k-cover{margin:0 0 0}
+.k-cover img{display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:640px;object-fit:cover}
+.k-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:clamp(40px,6vw,64px)}
+.k-gallery img{display:block;width:100%;height:100%;aspect-ratio:4/5;object-fit:cover}
+@media (max-width:640px){.k-gallery{grid-template-columns:1fr}}
+.k-one{margin:clamp(40px,6vw,64px) 0 0}
+.k-one img{display:block;width:100%;height:auto}
+.k-one figcaption{color:var(--snow-muted)}
+.wall-head{margin:clamp(48px,7vw,80px) 0 20px;border-top:2px solid var(--ink);padding-top:20px}
+.wall-head h3{font-size:clamp(28px,3.4vw,40px)}
+.wall{columns:3 260px;column-gap:16px}
+.wall figure{break-inside:avoid;margin:0 0 16px}
+.wall figure.wide{column-span:all}
+.wall img{display:block;width:100%;height:auto;border:1px solid var(--ink)}
+/* events */
+.ev-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:start}
+.ev-list{display:grid;gap:0;border-top:2px solid var(--ink)}
+.ev{padding-block:22px;border-bottom:1px solid var(--line)}
+.ev h3{font-size:24px;margin-bottom:6px}
+.ev .when{font:500 12px/1.5 var(--mono);color:var(--red);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.ev p{margin:0;max-width:56ch}
+.artists{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0;list-style:none}
+.artists li{border:1px solid var(--ink);padding:5px 11px;border-radius:999px;font-size:14px;font-weight:500}
+figure{margin:0}
+.figs{display:grid;gap:36px;position:sticky;top:90px}
+@media (max-width:820px){.figs{position:static}}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--ink)}
+figcaption{font:400 13px/1.5 var(--mono);color:var(--muted);margin-top:10px}
+@media (max-width:820px){.ev-grid{grid-template-columns:1fr}}
+
+/* people */
+.partners-photo{margin:0 0 clamp(32px,5vw,56px)}
+.partners-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--ink)}
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,48px)}
+.person{border-top:2px solid var(--ink);padding-top:20px}
+.portrait{aspect-ratio:4/5;max-width:100%;background:repeating-linear-gradient(135deg,#EEEAE7 0 12px,#F6F3F1 12px 24px);border:1px solid var(--line);display:grid;place-items:center;margin-bottom:20px}
+.person h3{font-size:clamp(28px,3vw,38px)}
+.person .role{font:500 12px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin:6px 0 14px}
+.person p{margin:0 0 12px;max-width:52ch}
+.person ul{margin:8px 0 0;padding-left:18px;font-size:15px}
+.person ul li{margin-bottom:4px}
+@media (max-width:720px){.people{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--ink);color:var(--snow)}
+.contact .grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:end}
+.contact h2{font-size:clamp(40px,6vw,76px)}
+.contact h2 span{color:#FF5A5F}
+.contact dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 20px;margin:0;font-size:16px}
+.contact dt{font:500 11px/2 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--snow-muted)}
+.contact dd{margin:0;overflow-wrap:anywhere}
+.contact .todo{border-color:#FF5A5F;color:#FF5A5F}
+@media (max-width:820px){.contact .grid{grid-template-columns:1fr}}
+footer{background:var(--ink);color:var(--snow-muted);border-top:1px solid #333}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;font:400 12px/1.6 var(--mono)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a href="#home" aria-label="HitterPetter Production House L.A. — home"><img src="img/logo.png" alt="HitterPetter Production House L.A."></a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a><a href="#film">Film</a><a href="#kuker">Kuker</a><a href="#events">Events</a><a href="#people">People</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <div class="hero wrap">
+    <div class="grid">
+      <div>
+        <p class="eyebrow">Production House · L.A. / O.C. · Est. 2016</p>
+        <h1>Films, festivals &amp; a twelve-foot-horned <span>Kuker.</span></h1>
+      </div>
+      <div>
+        <p class="lede">HitterPetter Productions makes films, music and events that are playful, a little provocative and hard to put in a box. We start from Bulgarian roots and take them somewhere nobody expects.</p>
+        <ul class="disciplines">
+          <li>Film <b>Audition · Blinks · Scarlet</b></li>
+          <li>Music &amp; concerts <b>Balkan artists across the U.S.</b></li>
+          <li>Festivals &amp; art cars <b>The Kuker · Balkan Fest</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="facts"><span>Irvine, California</span><span>14 festival wins for Scarlet &amp; Blinks</span><span>Kuker art car · Burning Man · Lightning in a Bottle 2019, 2022–2026</span></div>
+  </div>
+
+  <div class="cord" role="presentation"></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="about wrap">
+    <div class="grid">
+      <div class="name-card">
+        <p class="eyebrow">The name</p>
+        <p class="eq">Hit + Pet = <span>HitterPetter</span></p>
+        <p>Say it out loud and you get <em>Hitar Petar</em> (Хитър Петър), "Clever Peter," the sly trickster of Bulgarian storytelling.</p>
+        <p>In English it reads as our promise: we'll provoke you, then we'll warm you up.</p>
+        <small>A team of free-spirited artists with no limits on creativity, who never take themselves too seriously.</small>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <p class="big">HitterPetter Productions is a Los Angeles–based creative house for people who like to mix things up: film and festivals, Hollywood and the Balkans, high art and a good party.</p>
+        <p>We produce award-winning short films, concerts and festivals, and we've taken a fur-covered art car to the open desert. The goal is to give artists a bigger stage, to build a bridge between the U.S. and Bulgaria, and to make work that surprises people.</p>
+        <p>L.A. is a melting pot, and we wanted to bring something to it that nobody else could. So we draw on our Bulgarian roots, folklore included, as a source of originality. Then we mix them with film, electronic music, festival culture and whatever else sparks an idea.</p>
+        <p>It started in 2012 with a few friends who wanted to make things together. A weekly dance night grew into Balkan Fest, a secret festival in a hidden San Diego canyon. That led to a mobile stage with twelve-foot horns, and to films that went on to win at festivals from Beverly Hills to Dhaka.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cord" role="presentation"></div>
+
+  <!-- FILM -->
+  <section id="film" class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Film</p><h2>Award-winning short films</h2></div>
+      <p>Character-driven shorts written and directed by Maria Bobeva and produced by Petro Dushkov. They're about family, immigrant ambition and the children caught in between.</p>
+    </div>
+    <div class="films">
+      <article class="film">
+        <div><img class="poster-img" src="img/p-scarlet.jpg" alt="Scarlet poster: two girls on a couch, with festival laurels" width="560" height="837" loading="lazy"></div>
+        <div>
+          <p class="yr">2024</p>
+          <h3>Scarlet</h3>
+          <p class="tally"><span><b>9</b> wins</span><span><b>3</b> nominations</span></p>
+          <p class="log">A neglected nine-year-old girl and the young social worker who comes to her rescue.</p>
+          <p class="meta">Short drama · 20+ min · Shot in Bulgaria</p>
+          <dl class="credits" style="margin-top:16px">
+            <dt>Written &amp; directed</dt><dd>Maria Bobeva</dd>
+            <dt>Producers</dt><dd>Maria Bobeva, Petro Dushkov, Stanislava Ivy</dd>
+            <dt>Cast</dt><dd>Eleonora Ivanova, Nika Ignatieva, Mira Boyadjieva, Pavel Hristov, Venci Venc'</dd>
+            <dt>Cinematography</dt><dd>Aniri</dd>
+            <dt>Editor</dt><dd>Tsvetomir Tsanov</dd>
+            <dt>Music</dt><dd>Vasko Ivanov-Dexter</dd>
+            <dt>Sound design</dt><dd>Dimitar Rusev</dd>
+            <dt>Costume &amp; set</dt><dd>Nevena Beleva</dd>
+            <dt>Visual effects</dt><dd>Pavel Hristov</dd>
+          </dl>
+          <div class="links"><a href="https://www.imdb.com/title/tt15450682/" target="_blank" rel="noopener">IMDb ↗</a></div>
+        </div>
+        <div>
+          <ul class="laurels">
+            <li class="h" role="presentation">Wins</li>
+            <li class="win">Audience Award, Best Short Film · Newport Beach Film Festival 2024</li>
+            <li class="win">Best Short Film · Beverly Hills Film Festival 2024</li>
+            <li class="win">Best Screenplay, Maria Bobeva · Picture's Up! Film Festival 2024</li>
+            <li class="win">Best Short Film, Women Filmmakers Section · Dhaka International Film Festival 2025</li>
+            <li class="win">Vanguard Award, Best International Featurette · Idyllwild International Festival of Cinema 2025</li>
+            <li class="win">Grand Jury Award, Best Editor, Tsvetomir Tsanov · Idyllwild 2025</li>
+            <li class="win">Vanguard Award, Best Sound Design, Dimitar Rusev · Idyllwild 2025</li>
+            <li class="win">Best Foreign Short Film · Hollywood Florida Film Festival 2025</li>
+            <li class="win">Best Actress in a Foreign Short, Eleonora Ivanova · Hollywood Florida Film Festival 2025</li>
+            <li class="h" role="presentation">Nominations</li>
+            <li>Best Short Film · Arpa International Film Festival 2024</li>
+            <li>Best Actress, Eleonora Ivanova · Picture's Up! Film Festival 2024</li>
+            <li>Best Drama Short · Picture's Up! Film Festival 2024</li>
+            <li class="h" role="presentation">Official selections</li>
+            <li class="sel">SEEfest, South East European Film Festival Los Angeles 2024</li>
+            <li class="sel">In the Palace International Short Film Festival 2024</li>
+            <li class="sel">Golden Rose 2024</li>
+          </ul>
+        </div>
+      </article>
+      <article class="film">
+        <div><img class="poster-img" src="img/p-blinks.jpg" alt="Blinks poster: split image of an older man's open eyes and a teenager's closed eyes, with festival laurels" width="560" height="830" loading="lazy"></div>
+        <div>
+          <p class="yr">2021</p>
+          <h3>Blinks</h3>
+          <p class="tally"><span><b>5</b> wins</span><span><b>2</b> nominations</span></p>
+          <p class="log">A teenager challenges his foster father in a deadly contest. Inspired by real events.</p>
+          <p class="meta">Short drama · 8 min · 4K · Shot in the U.S.</p>
+          <dl class="credits" style="margin-top:16px">
+            <dt>Written &amp; directed</dt><dd>Maria Bobeva (directorial debut)</dd>
+            <dt>Producers</dt><dd>Petro Dushkov, Maria Bobeva, Anna Damaskova, Jean-François Cavelier, Marie Laurin</dd>
+            <dt>Cast</dt><dd>Dean Cameron, Gabriel Rivas</dd>
+            <dt>Cinematography</dt><dd>Sevdije Kastrati</dd>
+          </dl>
+          <div class="links"><a href="https://www.imdb.com/title/tt14147718/" target="_blank" rel="noopener">IMDb ↗</a><a href="https://filmfreeway.com/BLINKS" target="_blank" rel="noopener">FilmFreeway ↗</a></div>
+        </div>
+        <div>
+          <ul class="laurels">
+            <li class="h" role="presentation">Wins</li>
+            <li class="win">Best Short · New Jersey Film Awards 2022</li>
+            <li class="win">Best Actor, Gabriel Rivas · New Jersey Film Awards 2022</li>
+            <li class="win">Best Cinematography, Sevdije Kastrati · New Jersey Film Awards 2022</li>
+            <li class="win">Best First Time Director, Maria Bobeva · Hollywood On The Tiber Film Awards 2022</li>
+            <li class="win">Honorable Mention, Short Film – Drama · Vienna International Film Awards 2022</li>
+            <li class="h" role="presentation">Nominations</li>
+            <li>Best Director, Maria Bobeva · New Jersey Film Awards 2022</li>
+            <li>Best Actor, Dean Cameron · Picture's Up! Film Festival 2022</li>
+            <li class="h" role="presentation">Selections &amp; mentions</li>
+            <li class="sel">Honorable Mention · Skia International Film Festival 2022</li>
+            <li class="sel">Newport Beach Film Festival 2022</li>
+            <li class="sel">Arpa International Film Festival 2022</li>
+          </ul>
+        </div>
+      </article>
+      <article class="film">
+        <div><img class="poster-img" src="img/p-audition.jpg" alt="Audition poster: a blonde actress and her young son walk past a graffiti wall, with festival laurels and quotes" width="560" height="741" loading="lazy"></div>
+        <div>
+          <p class="yr">2018</p>
+          <h3>Audition</h3>
+          <p class="log">A Bulgarian actress chasing her Hollywood break brings her nine-year-old son to an audition, and he books the part instead. It's about the punishments and rewards of being an actress in Hollywood, seen from a mother's point of view, with culture shock running both ways. The title is styled <em>Auдition</em> (Bulgarian <em>Проsлушване</em>), a deliberate lost-in-translation typo.</p>
+          <p class="meta">Short comedy-drama · 17 min</p>
+          <dl class="credits" style="margin-top:16px">
+            <dt>Director</dt><dd>Sarah Jean Kruchowski</dd>
+            <dt>Writer</dt><dd>Maria Bobeva</dd>
+            <dt>Producer</dt><dd>Petro Dushkov</dd>
+            <dt>Exec. producer</dt><dd>Maria Bobeva</dd>
+            <dt>Co-producer</dt><dd>Elena Cristiean</dd>
+            <dt>Cast</dt><dd>Maria Bobeva, Alexander Ivanov, Zoran Radanovich, Marie Laurin, Vincent Alvas, Khrishna Grace, Desi Ivanova</dd>
+            <dt>Cinematography</dt><dd>Sevdije Kastrati</dd>
+            <dt>Editors</dt><dd>Dmytro Bershadskyy, Ryan Moody</dd>
+            <dt>Music</dt><dd>Milen Kirov</dd>
+            <dt>Costume &amp; set</dt><dd>Vania Ouzounova</dd>
+          </dl>
+          <div class="links"><a href="https://www.imdb.com/title/tt6217438/" target="_blank" rel="noopener">IMDb ↗</a><a href="https://filmfreeway.com/1385785" target="_blank" rel="noopener">FilmFreeway ↗</a></div>
+        </div>
+        <div>
+          <ul class="laurels">
+            <li class="h" role="presentation">Awards</li>
+            <li class="win">Best Female Lead, Maria Bobeva · Sydney Indie Film Festival 2018</li>
+            <li class="win">Best Fest Shorts · Sofia International Film Festival 2018</li>
+            <li class="win">Special Mention · London-Worldwide Comedy Short Film Festival, Autumn 2018</li>
+            <li>Nominee, Best Trailer · Sydney Indie Film Festival 2018</li>
+            <li class="h" role="presentation">Official selections</li>
+            <li class="sel">Newport Beach Film Festival 2018</li>
+            <li class="sel">Starring Europe Film Festival 2018, representing Bulgaria</li>
+            <li class="sel">Cannes Court Métrage 2018</li>
+            <li class="sel">Long Beach Indie International Film, Media and Music Festival 2018</li>
+            <li class="sel">Lift-Off Global Network, Los Angeles 2018</li>
+          </ul>
+          <ul class="press">
+            <li>"Such a warm and charming little gem of a movie! The power of women in film!"<span>Mike Sandoval, Executive VP, MGM/UA Studios</span></li>
+            <li>"It is absolutely brilliant!"<span>Ted Kotcheff, producer/director</span></li>
+          </ul>
+          <p class="meta" style="margin-top:14px">Made over nearly a year with the help of Bulgarian communities across North America and the Consulate General of Bulgaria in Los Angeles. Many of the donors, volunteers and extras are named in the credits.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- KUKER -->
+  <section id="kuker" class="kuker">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Art car · Mobile stage</p><h2>The Bulgarian <em>Kuker</em> Art Car</h2></div>
+        <div><p class="k-tag">Metal &amp; fur &amp; fire.</p><p>A moving sculpture and a festival on wheels, with an orchestrated light show and flame effects timed to the music. A collective of Bulgarian and American artists built it, and HitterPetter Productions produces and manages it.</p></div>
+      </div>
+      <figure class="k-cover">
+        <img src="img/k-cover.jpg" alt="The Kuker art car at sunset in the desert, flames shooting from both horns, with DJs in the booth and people dancing around it" width="1600" height="1200" loading="lazy">
+      </figure>
+      <div class="specs">
+        <div><b>5,000 yrs</b><span>Kukeri tradition, reloaded</span></div>
+        <div><b>12 ft</b><span>Fire-breathing horns</span></div>
+        <div><b>15,000 W</b><span>Sound, pro DJ booth &amp; live-band stage</span></div>
+        <div><b>35–40</b><span>Riders on board</span></div>
+      </div>
+      <div class="k-grid">
+        <div>
+          <p>The Kuker borrows its look from Bulgaria's kukeri, masked dancers who have been scaring off evil spirits with horns, fur and bells for some 5,000 years. We kept the horns and the fur, then added a 15,000-watt sound system, a pro DJ booth, a live-band stage, LED light and flame effects.</p>
+          <p>In 2016 the Balkan Fest organizing team went to Burning Man together. On the way home, Petar Ivanov "Petsata" and Rado Raychev said the crew would bring its own art car the next year. Petro and Maria answered at once: <strong>"It'll be a Kuker!"</strong></p>
+          <p>The Kuker (a.k.a. <strong>The Disco Daemon</strong>) is "a mobile stage for spreading Bulgarian DNA through the 21st century." It runs <strong>an orchestrated show of sound, light, fire and atmospherics</strong>, and works as a roaming party, a stationary dance spot, or a late-night stage once the main stages shut down.</p>
+          <ul class="crew" aria-label="Kuker crew">
+            <li>Petro <small>motivation</small></li>
+            <li>Peca (Petar Ivanov) <small>execution</small></li>
+            <li>Bilyana Yankulova <small>imagination</small></li>
+            <li>Maria Bobeva <small>majesty</small></li>
+            <li>Elena <small>swank</small></li>
+            <li>Dani <small>finesse</small></li>
+            <li>Zorqie <small>brightness</small></li>
+            <li>Filip Petkov / DJ PHEEL <small>loudness</small></li>
+            <li>Toni <small>safety 3rd</small></li>
+            <li>Inna Taskaeva <small>fabric artist</small></li>
+            <li>Rado Raychev <small>founding crew</small></li>
+            <li>Ilian Pavlov <small>founding light design</small></li>
+          </ul>
+          <div class="k-links">
+            <a href="https://kuker.org/" target="_blank" rel="noopener">kuker.org ↗</a>
+            <a href="https://www.instagram.com/kuker.art.car/" target="_blank" rel="noopener">Instagram ↗</a>
+            <a href="https://soundcloud.com/kuker_art_car" target="_blank" rel="noopener">SoundCloud ↗</a>
+          </div>
+        </div>
+        <ol class="timeline" aria-label="Kuker history">
+          <li><time>2016</time><span>The crew goes to Burning Man<small>The idea for the Kuker is born, Kuker Camp established</small></span></li>
+          <li class="build"><time>2017</time><span>Kuker 1.0 built<small>First, smaller art car, built for Burning Man</small></span></li>
+          <li><time>2017–19</time><span>Burning Man, Black Rock City</span></li>
+          <li><time>Jun 2018</time><span>Summer Solstice Desert Party<small>El Mirage Lake, with DJs Pheel, Kafa and HP</small></span></li>
+          <li><time>Mar 2019</time><span>Kuker Fest California<small>The Kuker powers HitterPetter's own festival in San Diego</small></span></li>
+          <li><time>2019</time><span>Lightning in a Bottle<small>First LIB, with Kuker 1.0</small></span></li>
+          <li class="build"><time>2020–21</time><span>Kuker 2.0 built<small>Full rebuild during the pandemic</small></span></li>
+          <li><time>2021</time><span>Renegade Burn, Black Rock Desert<small>Kuker 2.0 debut</small></span></li>
+          <li><time>Fall 2021</time><span>Venice Afterburn</span></li>
+          <li><time>NYE 21/22</time><span>Playa Playground, AREA15 Las Vegas<small>First large commercial booking</small></span></li>
+          <li><time>May 2022</time><span>Desert Hearts Festival<small>Lake Perris, California</small></span></li>
+          <li><time>2022–26</time><span>Lightning in a Bottle<small>Five consecutive editions</small></span></li>
+          <li><time>Apr 2024</time><span>Texas Eclipse Festival<small>Reveille Peak Ranch, Burnet TX, for the total solar eclipse</small></span></li>
+          <li><time>2025–26</time><span>Burning Man, Black Rock City<small>Kuker 2.0, registered Mutant Vehicle</small></span></li>
+        </ol>
+      </div>
+      <figure class="k-one">
+        <img src="img/kuker1.jpg" alt="Collage of Kuker 1.0, The Ritual Dancer: the first art car at Burning Man, in a street parade, at festivals, and with DJs and dancers" width="1000" height="562" loading="lazy">
+        <figcaption>Kuker 1.0, "The Ritual Dancer" (2017–2019): DJs collaborating with choreographers, line-dancing workshops and parades. It mixed ancient traditions with a contemporary vibe as a community art project.</figcaption>
+      </figure>
+      <div class="k-gallery">
+        <figure><img src="img/k-1.jpg" alt="The Kuker at dusk on the playa, horns firing, dancers in the foreground" width="700" height="933" loading="lazy"></figure>
+        <figure><img src="img/k-2.jpg" alt="The Kuker at night with glowing blue eyes and flames from both horns above a dancing crowd" width="700" height="875" loading="lazy"></figure>
+        <figure><img src="img/k-3.jpg" alt="A DJ raising a hand in the Kuker's booth as tall flames rise from both horns over the crowd" width="700" height="875" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Festivals · Music · Happenings</p><h2>Gatherings where the audience joins in</h2></div>
+      <p>Since 2012 the team has created events where the line between performer and audience disappears: secret festivals, sold-out concerts and one-night happenings. We started on our own, worked through the nonprofit PCHELA, and have run as HitterPetter Productions since 2016.</p>
+    </div>
+    <div class="ev-grid">
+      <div class="ev-list">
+        <div class="ev">
+          <div class="when">Co-founded 2013 · San Diego · 2013, 2014, 2016–2019</div>
+          <h3>Balkan Fest – Europa Roots</h3>
+          <p>In 2012 we visited a flamenco festival that our friend Basilio Ceravolo has hosted for about two decades, at his estate in a hidden canyon in the heart of San Diego. World-class performers and the audience mix like one big family at a village fair. Petro Dushkov, Maria Bobeva, Basilio Ceravolo and Maria Breshkova decided to bring that model to the Balkans.</p>
+          <p class="sub">The idea was a mini Koprivshtitsa: a small Bulgarian island where young and old, artists and fans live together for a long weekend in late May. Maria Bobeva was artistic director and turned the canyon into a Bulgarian village. Basilio and Maria Breshkova ran logistics and volunteers. Everyone attending volunteered too, in the kitchen, at registration and on clean-up. Guests took dance classes with leading Bulgarian, Greek, Romanian and Turkish choreographers, plus workshops in Troyan pottery, embroidery, kuker-mask making, and weaving on a custom-built Chiprovtsi loom. The location stayed secret and was revealed bit by bit in a private group, so only the truly curious made it down the rabbit hole.</p>
+          <p class="sub">Tagline: <em>Different Tribes, One Spirit!</em> Presented by Basilio, PCHELA and HitterPetter. One edition brought together three of Bulgaria's great gaida players, Vasil Bebelekov, Petar Yanev and Ivan Varimezov, with the voices of Valya Balkanska, Maria Bebelekova and Tsvetanka Varimezova.</p>
+        </div>
+        <div class="ev">
+          <div class="when">March 23, 2019 · Basilio's, San Diego</div>
+          <h3>Kuker Fest California</h3>
+          <p>A gathering of kukeri "from all lands," organized by the Kuker Crew and led by Petro Dushkov. Elka and Dancho Ruskov of the Bulgarian Cultural and Heritage Center of Seattle supported it, along with Eli Yordanova, founder of the Festival of Bulgarian Arts in Toronto. The program featured Dimitar Minkov of the Dimitrovche ensemble (Toronto), Konstantin "Kotseto" Marinov of Chicago's Vereya festival, pianist and composer Milen Kirov, Donka and Nikolay Kolev, Stoyan Kostov "Pileto" and Rumen Shopov.</p>
+          <p class="sub">Supported by the Bulgarian Cultural and Heritage Center of Seattle, the Herb Alpert Music Center (LACC), Bulgarian Traditions NPC-Chicago, ElArte-Toronto, the Consulate General of Bulgaria in L.A. and the National Culture Fund of Bulgaria. Powered by the Kuker art car, the day included a Kuker lab and theatre for kids and adults, a kukeri seminar, mask and embroidery workshops, a campfire jam and an evening gala concert with DEXTЪR, the Varimezovs and the Horo-San Band.</p>
+          <p class="sub">The headliner was electronic producer Ivan Shopov with the vocal duo Avigeya. Lora Shopova's visuals were projection-mapped onto fabric sails built by Filip Petkov (DJ PHEEL). It all played out in a 300-seat amphitheater that Basilio built by hand from recycled concrete blocks.</p>
+        </div>
+        <div class="ev">
+          <div class="when">2018 &amp; 2024 · Kirkland Performance Center, WA</div>
+          <h3>Bulgarian Christmas concerts, Seattle</h3>
+          <p>Scripted and directed by HitterPetter for the Bulgarian Cultural and Heritage Center of Seattle, with support from 4Culture.</p>
+          <p class="sub"><strong>Silent Night, Bright Night</strong> (December 15, 2018) featured Maria Bobeva, violinist Svet Radoslavov and Kostadin Marinov, with Bulgarian Voices of Seattle, Radost Ensemble, Hopa Trop, Medena Pitka and Seattle Cheta.</p>
+          <p class="sub"><strong>Paint Me a Song</strong> (<em>Нарисувай ми песен</em>, December 14, 2024) was the Christmas concert of Seattle's Bulgarian community, with special guests the Wladigeroff Brothers alongside local and visiting artists.</p>
+        </div>
+        <div class="ev">
+          <div class="when">Concerts &amp; tours produced</div>
+          <h3>Bulgarian artists on U.S. stages</h3>
+          <p>Concerts and North American tour stops for some of Bulgaria's most exciting musicians, including Theodosii Spassov and BALKANSKY, the project of Ivan Shopov, Ivo Hristov and Theodosii Spassov, who played Molly Malone's in L.A. with Orkestar Mézé on December 4, 2015. Highlights include the Theodosii Spassov Quintet in Hollywood (January 21, 2018) and the Wladigeroff Brothers, "Vienna's jazz vagabonds" (May 11, 2025), both at the LACC Herb Alpert Music Center in Los Angeles.</p>
+          <ul class="artists">
+            <li>Valya Balkanska &amp; Petar Yanev</li><li>Theodosii Spassov Quintet</li><li>BALKANSKY</li><li>Oratnitsa</li><li>Ivan Shopov &amp; Avigeya</li><li>Wladigeroff Brothers</li><li>Milen Kirov</li><li>Orkestar Mézé</li>
+          </ul>
+        </div>
+        <div class="ev">
+          <div class="when">Longtime collaborators · Los Angeles</div>
+          <h3>Milen Kirov &amp; Orkestar Mézé</h3>
+          <p>Pianist, composer and educator Milen Kirov is one of HitterPetter's closest creative partners. Born in Plovdiv into a musical family, he holds a doctorate from CalArts and a master's in composition from CSU Northridge, and teaches piano, composition and theory at Los Angeles City College. His music sits where Western classical, American jazz and Bulgarian traditional music meet. He has played and recorded with Perry Farrell, Money Mark and James Gadson, and released the solo piano album <em>Spatium</em> in 2022.</p>
+          <p class="sub">In 2011 he founded <strong>Orkestar Mézé</strong>, an 11-piece "peasant funk" band with a six-piece horn section and members from six countries. It mixes American funk and soul with Bulgarian odd meters. Their second album features Ellis Hall of Tower of Power and Theodosii Spassov.</p>
+          <p class="sub">With HitterPetter, Milen composed the original score for <em>Audition</em> and performed at Kuker Fest California, and on December 4, 2015 Orkestar Mézé shared the stage at Molly Malone's in Los Angeles with BALKANSKY (Theodosii Spassov, Ivan Shopov and Ivo Hristov), Ellis Hall and Miroslav Tadić.</p>
+        </div>
+        <div class="ev">
+          <div class="when">Often with the Consulate General of Bulgaria, Los Angeles</div>
+          <h3>Film screenings</h3>
+          <p>Screenings of new Bulgarian cinema for Southern California audiences, many with the filmmakers in person for a Q&amp;A.</p>
+          <ul class="laurels">
+            <li><em>The Judgment</em>, Bulgaria's Oscar contender · open screening &amp; Q&amp;A · November 14, 2015</li>
+            <li><em>Holiday Makers</em> (<em>Летовници</em>) · holiday screening, Irvine · November 22, 2017</li>
+            <li><em>Audition</em> · home-turf screenings in Orange County, San Diego and San Francisco · February–May 2018</li>
+            <li><em>Omnipresent</em> by Ilian Djevelekov · screening &amp; Q&amp;A, Art Theatre Long Beach · November 10, 2018</li>
+            <li><em>Women Do Cry</em> by Mina Mileva &amp; Vesela Kazakova · with BACES, SEEFest and the Consulate · Lumiere Cinema, Beverly Hills · March 20, 2022</li>
+          </ul>
+        </div>
+        <div class="ev">
+          <div class="when">Stage &amp; page</div>
+          <h3>Theater, readings &amp; art nights</h3>
+          <p>Bulgarian theater on L.A. stages: <em>Marriage by Ads</em> (<em>Женитба по обяви</em>), a comedy with Valentin Tanev, Maria Bobeva and Toncho Tokmakchiev, presented with BG Voice at The Colony Theatre (September 21, 2023); <em>The Road to Aphrodite</em> with Boyka Velkova (Long Beach, October 22, 2016); and <em>The Spider</em> (<em>Паякът</em>) by Yordan Slaveykov and Dimitar Kasabov, with Penko Gospodinov and Anastasia Lyutova, at the Dorie Theater at The Complex in Hollywood (February 17, 2017).</p>
+          <p class="sub">Plus book readings and signings, such as Zachary Karabashliev's <em>18% Gray</em> at The Last Bookstore in downtown L.A. (December 3, 2013), and art nights like the Bulgarian Art Walk at the Croatian Cultural Center of Greater Los Angeles (June 27, 2015).</p>
+        </div>
+        <div class="ev">
+          <div class="when">Since January 2012 · Orange County</div>
+          <h3>D.E.B.A. dance club</h3>
+          <p>D.E.B.A. ("Dance Ethnos – Bulgarian Aerobics," or as we like to call it, Bulgarian Folk Aerobics) started half as a joke. It was a weekly folk-dance night Petro and Maria set up for friends, billed as a workout. It became the seed of everything that followed and connected the team with dancers, musicians and teachers across North America. Still going strong, with master classes from prominent guest artists, choreographers and educators: Petur Iliev, Gergana Panova, Elena Dimitrova, Daniela Ivanova-Nyberg, Prof. Anton Andonov, Prof. Nikolay Tsvetkov, Konstantin "Kotseto" Marinov, Tania Dimitrova, Iliana Bozhanova and Todor Yankov, Nina Kavardjikova, Diane Baker, Jaap Leegwater and many more.</p>
+        </div>
+      </div>
+      <div class="figs">
+        <figure>
+          <img src="img/pchela.jpg" alt="Two PCHELA organizers on stage, one holding a microphone and the other a Certificate of Congressional Recognition" width="1400" height="933" loading="lazy">
+          <figcaption>June 20, 2015: PCHELA Bulgarian Education and Culture Society receives a Certificate of Congressional Recognition for showcasing Bulgarian culture in Los Angeles.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/bf2017.jpg" alt="Maria Bobeva and Petro Dushkov in embroidered Bulgarian costumes in front of the Balkan Fest 2017 banner" width="800" height="1066" loading="lazy">
+          <figcaption>Petro and Maria at Balkan Fest – Europa Roots, San Diego, Memorial Day weekend 2017.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="wall-head"><p class="eyebrow">From the archive</p><h3>Posters</h3></div>
+    <div class="wall">
+      <figure class="wide"><img src="img/kukerfest.jpg" alt="Kuker Fest California poster, March 23 at Basilio's, San Diego, with the full lineup" width="1200" height="526" loading="lazy"><figcaption>Kuker Fest California · 2019</figcaption></figure>
+      <figure><img src="img/balkanfest.jpg" alt="Balkan Fest Europa Roots 2017 poster, a painted Bulgarian village scene" width="900" height="784" loading="lazy"><figcaption>Balkan Fest – Europa Roots · 2017</figcaption></figure>
+      <figure><img src="img/seattle2018.jpg" alt="Poster for Silent Night, Bright Night, Seattle 2018" width="800" height="1214" loading="lazy"><figcaption>Silent Night, Bright Night · Seattle 2018</figcaption></figure>
+      <figure><img src="img/seattle2024.jpg" alt="Poster for Paint Me a Song, Seattle 2024" width="800" height="1066" loading="lazy"><figcaption>Paint Me a Song · Seattle 2024</figcaption></figure>
+      <figure><img src="img/wladigeroff.jpg" alt="HitterPetter Productions presents Wladigeroff Bros, Vienna's jazz vagabonds, May 11, 2025, LACC" width="1000" height="688" loading="lazy"><figcaption>Wladigeroff Bros · Los Angeles 2025</figcaption></figure>
+      <figure><img src="img/spider.jpg" alt="Poster for The Spider, a Bulgarian play with Penko Gospodinov and Anastasia Lyutova, Dorie Theater at The Complex, February 17, 2017" width="600" height="1123" loading="lazy"><figcaption>The Spider · Hollywood 2017</figcaption></figure>
+      <figure><img src="img/marriage.jpg" alt="Poster for the comedy play Marriage by Ads with Valentin Tanev, Maria Bobeva and Toncho Tokmakchiev" width="700" height="537" loading="lazy"><figcaption>Marriage by Ads · 2023</figcaption></figure>
+      <figure><img src="img/womendocry.jpg" alt="Screening poster for Women Do Cry at Lumiere Cinema, Beverly Hills, March 20, 2022" width="1000" height="539" loading="lazy"><figcaption>Women Do Cry · Beverly Hills 2022</figcaption></figure>
+      <figure><img src="img/karabashliev.jpg" alt="Poster for Zachary Karabashliev's 18% Gray book reading at The Last Bookstore, downtown L.A." width="600" height="936" loading="lazy"><figcaption>Zachary Karabashliev, <em>18% Gray</em> · The Last Bookstore 2013</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="cord" role="presentation"></div>
+
+  <!-- PEOPLE -->
+  <section id="people" class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">People</p><h2>The partners</h2></div>
+      <p>HitterPetter is run by two creative partners who met through a shared love of art and culture. Since then they have built everything together: films, festivals, concerts and one very large horned art car.</p>
+    </div>
+    <figure class="partners-photo">
+      <img src="img/cannes.jpg" alt="Petro Dushkov and Maria Bobeva smiling with festival badges in front of the 71st Festival de Cannes backdrop" width="1400" height="1050" loading="lazy">
+      <figcaption>Maria Bobeva and Petro Dushkov at the 71st Festival de Cannes, May 2018, where <em>Audition</em> screened at Cannes Court Métrage.</figcaption>
+    </figure>
+    <div class="people">
+      <article class="person">
+        <h3>Petro Dushkov</h3>
+        <p class="role">Founder &amp; director · Producer</p>
+        <p>Petro is the founder and director of HitterPetter Productions, a Los Angeles–based production company that produces cultural projects in the U.S. and Bulgaria. The company gives Bulgarian artists a global stage and introduces international audiences to Bulgaria's rich cultural heritage and spirit.</p>
+        <p>He has lived in the U.S. for more than two decades. He co-founded the D.E.B.A. dance club (2012) and Balkan Fest (2013), and served as co-founder and director of the nonprofit PCHELA from 2013 to 2015. From December 2020 to October 2022 he served on the board of directors of BACES, the Bulgarian American Cultural Educational Society in Los Angeles, where he ran the cultural program and the annual calendar of events. He produced the award-winning shorts <em>Audition</em>, <em>Blinks</em> and <em>Scarlet</em>, and he produces the Kuker art car.</p>
+        <p>A self-taught gaida (bagpipe) player since his student days at the Technical University of Gabrovo, he has played everywhere from a landslide-wrecked villa on the Black Sea coast to the top of Yosemite Falls.</p>
+        <blockquote class="quote">"Life here is like a Hollywood movie. It's up to you whether it's a comedy, a drama, a thriller or a horror film, and whether it gets a happy ending."<cite>Petro Dushkov, interview</cite></blockquote>
+        <ul>
+          <li>Producer: Audition (2018), Blinks (2021), Scarlet (2024)</li>
+          <li>Artistic director, Seattle Bulgarian Christmas concerts 2018 &amp; 2024</li>
+          <li>Co-founder &amp; director, PCHELA, 2013–2015</li>
+          <li>Board of directors, BACES, 2020–2022: cultural program &amp; events calendar</li>
+          <li>Kuker art car producer, 2017–present</li>
+        </ul>
+        <p style="margin-top:14px"><a href="https://www.imdb.com/name/nm8635173/" target="_blank" rel="noopener">IMDb ↗</a></p>
+      </article>
+      <article class="person">
+        <h3>Maria Bobeva</h3>
+        <p class="role">Creative partner · Actress · Writer · Director</p>
+        <p>Maria is a Bulgarian actress known for her many roles at the State Satirical Theatre in Sofia. She graduated from the National Academy for Theatre and Film Arts, where she studied with the renowned professors Krikor Azaryan, Todor Kolev and Atanas Atanassov.</p>
+        <p>Her stage partners have included Stoyanka Mutafova, Georgi Kaloyanchev, Dimitar Manchev and Nikola Anastasov, as well as audience favorites Hristo Garbov, Plamen Sirakov, Filip Avramov and Krasi Radkov.</p>
+        <p>After a successful career with the Satirical Theatre, Maria moved to Hollywood to pursue film. There she has won numerous awards as an actress and as a screenwriter-director, with her films produced by her HitterPetter partner Petro Dushkov. She was also artistic director of Balkan Fest.</p>
+        <ul>
+          <li>Writer &amp; lead: Audition (2018), Best Female Lead, Sydney Indie FF</li>
+          <li>Writer &amp; director: Blinks (2021), Scarlet (2024)</li>
+          <li>Co-founder &amp; artistic director, Balkan Fest San Diego</li>
+          <li>Co-founder, D.E.B.A. dance club</li>
+        </ul>
+        <p style="margin-top:14px"><a href="https://www.imdb.com/name/nm3941592/" target="_blank" rel="noopener">IMDb ↗</a></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<section id="contact" class="contact">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow" style="color:#FF5A5F">Contact</p>
+      <h2>Book the Kuker. Pitch a film. <span>Throw a festival.</span></h2>
+    </div>
+    <dl>
+      <dt>Email</dt><dd>petro.dushkov@hitterpetter.com</dd>
+      <dt>Office</dt><dd>12 Mauchly, Suite J<br>Irvine, CA 92618</dd>
+      <dt>Serving</dt><dd>L.A., O.C., San Diego &amp; festivals nationwide</dd>
+      <dt>Follow</dt><dd><a href="https://www.instagram.com/kuker.art.car/" target="_blank" rel="noopener">@kuker.art.car</a> · <a href="https://www.facebook.com/hitterpetter" target="_blank" rel="noopener">Facebook</a></dd>
+    </dl>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>© 2026 HitterPetter Productions · Production House L.A.</span>
+    <span>A d/b/a of Petroslav Dushkov · Irvine, CA</span>
+  </div>
+</footer>
+
+</body>
+</html>
